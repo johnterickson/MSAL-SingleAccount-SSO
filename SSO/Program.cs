@@ -17,7 +17,7 @@ namespace ConsoleApp9
     {
         // Public Client setup
         public const string ClientId = "1d18b3b0-251b-4714-a02a-9956cec86c2d";
-        public const string Authority = "https://login.microsoftonline.com/common"; // IMPORTANT: use /organizations for Work and School accounts only
+        public const string Authority = "https://login.microsoftonline.com/organizations"; // IMPORTANT: use /organizations for Work and School accounts only
         public static readonly string[] Scopes = new[] { "user.read" };
 
         // App registration setup
@@ -231,6 +231,7 @@ namespace ConsoleApp9
         {
             _pca = PublicClientApplicationBuilder
                             .Create(Settings.ClientId)
+                            .WithAuthority(Settings.Authority)
                             .WithWindowsBroker(true)             // On Mac, Linux and older Windows, a browser will be used (system browser). On Win10+, broker (WAM) is used
                             .WithRedirectUri("http://localhost") // Broker doesn't need this, but browser does (redirect uri is http://localhost - this needs to be registered)
                             .Build();
