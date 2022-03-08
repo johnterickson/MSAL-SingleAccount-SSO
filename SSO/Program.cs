@@ -16,7 +16,7 @@ namespace ConsoleApp9
     public static class Settings
     {
         // Public Client setup
-        public const string ClientId = "04f0c124-f2bc-4f59-8241-bf6df9866bbd";
+        public const string ClientId = "1d18b3b0-251b-4714-a02a-9956cec86c2d";
         public const string Authority = "https://login.microsoftonline.com/common"; // IMPORTANT: use /organizations for Work and School accounts only
         public static readonly string[] Scopes = new[] { "user.read" };
 
