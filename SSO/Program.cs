@@ -56,7 +56,7 @@ namespace ConsoleApp9
                 Console.Clear();
                 Console.ResetColor();
 
-                // Tries to get a token silently from: cache, Windows, IWA.If it all fails, interactive.
+                // Tries to get a token silently from: cache, Windows, IWA. If it all fails, interactive.
                 AuthenticationResult authenticationResult = await LoginSilentAndInteractiveAsync().ConfigureAwait(false);
                 PrintSuccessResult(authenticationResult);
 
